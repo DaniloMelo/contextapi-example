@@ -1,7 +1,9 @@
+'use client'
+
 import ProductType from "@/types/ProductType"
 import Image from "next/image"
-import { useContext } from "react"
-import { ProductsContext } from "@/contexts/productsContext" 
+// import { useContext } from "react"
+import { useProductsContext } from "@/app/contexts/productsContext"
 
 interface CardProps {
     product: ProductType
@@ -9,7 +11,7 @@ interface CardProps {
 
 export default function Card({ product }: CardProps) {
 
-    const { addProdToContext } = useContext(ProductsContext)
+    const { addProdToContext } = useProductsContext()
 
     return (
         <>
@@ -28,7 +30,7 @@ export default function Card({ product }: CardProps) {
                 </div>
 
                 <button className="bg-blue-500 hover:bg-blue-700 p-1 w-full rounded-md"
-                    onClick={() => addProdToContext(product)}
+                   onClick={() => addProdToContext(product)}
                 >
                     Comprar
                 </button>
