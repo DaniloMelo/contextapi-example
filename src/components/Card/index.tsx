@@ -2,7 +2,6 @@
 
 import ProductType from "@/types/ProductType"
 import Image from "next/image"
-// import { useContext } from "react"
 import { useProductsContext } from "@/app/contexts/productsContext"
 
 interface CardProps {

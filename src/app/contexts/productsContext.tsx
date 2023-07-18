@@ -13,23 +13,6 @@ const ProductsContext = createContext<ProductsContextProps>({
     addProdToContext: () => {}
 })
 
-// function ProductsProvider({ children }: {children: React.ReactNode}) {
-    
-//     const [products, setProducts] = useState<ProductType[]>([])
-
-//     function addProdToContext (product: ProductType) {
-//         setProducts(prevProds => [...prevProds, product])
-//     }   
-   
-//     return(
-//         <ProductsContext.Provider value={{products, addProdToContext}}>
-//             {children}
-//         </ProductsContext.Provider>
-//     )
-// }
-
-// export {ProductsProvider, ProductsContext}
-
 export const ProductsProvider = ({children}: {children: React.ReactNode}) => {
     
     const [products, setProducts] = useState<ProductType[]>([])

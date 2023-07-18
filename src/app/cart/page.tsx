@@ -5,10 +5,12 @@ import { useProductsContext } from "../contexts/productsContext"
 export default function cartPage() {
 
     const { products } = useProductsContext()
+
     return (
         <div>
             <h1 className="text-center mt-5 mb-5">Meu carrinho de compras</h1>
-            <div className="flex justify-center items-start h-screen">
+
+            <div className="flex flex-col items-center h-screen">
                 <table className="border border-zinc-500 w-4/5">
                     <thead className="bg-zinc-800">
                         <tr>
@@ -30,6 +32,9 @@ export default function cartPage() {
                         })}
                     </tbody>
                 </table>
+
+                {products.length === 0&& <p className="text-center mb-5 mt-5">Nenhum produto no carrinho</p>}
+
             </div>
         </div>
     )
